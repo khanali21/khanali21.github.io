@@ -1,7 +1,7 @@
 # main links links
 main:
-  - title: "HiMindz Ltd."
-    url: http://www.himindz.ie
-
-  - title: "Blog"
+  - title: "Recent Posts."
     url: /
+
+  - title: "DevOps"
+    url: /devops.html
