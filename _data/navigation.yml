@@ -1,7 +1,10 @@
 # main links links
 main:
-  - title: "Recent Posts."
+  - title: "Recent Posts"
     url: /
 
   - title: "DevOps"
-    url: /devops.html
+    url: /devops/
+
+  - title: "Automation That Works"
+    url: /automation-that-works/
