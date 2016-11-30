@@ -8,4 +8,4 @@ comments: true
 ---
 Welcome to my blog on github pages, finally something that I might actually be inspired to blog more regularly. 
 In the coming weeks, I will be migrating all my content to this blog. And then hopefully I would be writing a weekly blog on everything technical.
-I must mention here that one of my favorite blogger <a target="_blank" href="https://wilsonmar.github.io/">Wilsonmar</a>, inspired to me to move to github pages instead of maintaining my own wordpress blog.
+I must mention here that one of my favorite blogger <a target="_blank" href="https://wilsonmar.github.io/">Wilsonmar</a>, inspired me to move to github pages instead of maintaining my own wordpress blog.
