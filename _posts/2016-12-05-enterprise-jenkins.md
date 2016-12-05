@@ -13,7 +13,7 @@ comments: true
 Implementing an enterprise scale Jenkins infrastructure that can support multiple teams working at the sametime is challenging to say the least.
 <a href="https://www.cloudbees.com/products/cloudbees-jenkins-platform/enterprise-edition">Cloudbees Jenkins Enterprise</a> provide the enterprise features including high availability, horizontal scaling and backup/restore with multiple Jenkins masters.
 CBJE is commercial solution available as in-premise and cloud offering. 
-I would discuss here two approaches for implementing an enterprise solution based on the open source Jenkins and Docker that provides the following enterprise features:
+I would discuss here two alternative approaches for implementing an enterprise solution based on the open source Jenkins and Docker that provides the following enterprise features:
 
 ### High Availability
 High Availability is the most desired feature in enterprise Jenkins implementation particularly when Jenkins is running the CI/CD pipelines in an agile based software development team. 
