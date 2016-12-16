@@ -9,7 +9,7 @@ image:
   creditlink: https://www.youtube.com/watch?v=W5Yz3n8Or8E&t=2793s
 comments: true
 ---
-User stories are the basic building block in Agile approach for software development. User story is probably the most talked about subject in any software development team using agile development model as User Stories concern all the stakeholders. Besides being:<br/>
+User stories are the basic building block in Agile approach for software development. User story is probably the most talked about topic in any software development team using agile development model as User Stories concern all the stakeholders. Besides being:<br/>
 <br/>
 > the simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system.
 <br/>--Mike Cohen <a href='https://www.mountaingoatsoftware.com/agile/user-stories'>User Stories</a>
