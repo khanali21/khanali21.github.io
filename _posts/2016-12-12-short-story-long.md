@@ -38,7 +38,7 @@ A user story should act as a pivot for robust automation. From the inception of 
 The user story workflow would be our primary target for automation. I take two deifferent tools Redmine and Jira, to automate the complete workflow of a user story. This automation include:<br/>
 
 1. Automated status change of the story from one state to another based on the events.<br/>
-2. Acceptance Test Automation<br/>
+2. Acceptance Test Automation with story status update as part of the CI pipeline.<br/>
 3. Automated notification related to one or group of user stories via ChatOps system. <br/>
 4. Automation for the release notes based on the user stories including in the release.<br/>
 5. Automated Bug/Defect association with User Story.<br/>
