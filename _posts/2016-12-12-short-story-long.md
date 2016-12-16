@@ -21,14 +21,14 @@ User stories serve several different purposes including:<br/>
 5. And last but not the least user stories are the basis of completion of the project for client and developer alike.<br/>
 
 ### Structure and Content of User Story
-The structure and content of the user story depends on several factors, in the past 5 years I have worked on 6 unique projects in three continents of the world with six different teams varying not only in size and skills but coming from different cultural backgrounds. In this journey, I have worked with teams in very large enterprises to start-up developing the next generation technologies.
+The structure and content of the user story depends on several factors, in the past 5 years I have worked on 6 unique projects in three continents of the world with six different teams varying not only in size and skills but coming from different cultural backgrounds. In this journey, I have worked with teams in very large enterprises to start-up developing the next generation technologies.<br/>
 
 In this experience only common part in the user stories I have come across is the start of the story with "As a ... ", I have seen user stories that consists of:<br/>
-* The algorithmic style if-then-else. 
-* The user story that is concise enough to capture the functionality that is deliverable in a single day.
-* To the user story that is big enough to capture the whole functionality of the project.
-* The user story that serves as the pivot for a fully automated Continuous delivery pipeline.
-* To user story that have no test or automation aspects, not even any acceptance criteria or conditions of satisfaction.
+* The algorithmic style if-then-else. <br/>
+* The user story that is concise enough to capture the functionality that is deliverable in a single day.<br/>
+* To the user story that is big enough to capture the whole functionality of the project.<br/>
+* The user story that serves as the pivot for a fully automated Continuous delivery pipeline.<br/>
+* To user story that have no test or automation aspects, not even any acceptance criteria or conditions of satisfaction.<br/>
 
 ### Automation 
 A user story should act as a pivot for robust automation. From the inception of the user story as it gets added in the agile tool (like JIRA), to the production as it is delivered and deployed on different environments, the automation should revolve around the user story.
