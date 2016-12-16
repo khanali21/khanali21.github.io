@@ -35,7 +35,7 @@ In this experience only common part in the user stories I have come across is th
 
 ### Automation 
 A user story should act as a pivot for robust automation. From the inception of the user story as it gets added in the agile tool (like JIRA), to the production as it is delivered and deployed on different environments, the automation should revolve around the user story.
-The user story workflow would be our primary target for automation. I take two deifferent tools Redmine and Jira, to automate the complete workflow of a user story. This automation include:<br/>
+The user story workflow would be our primary target for automation. I take two different tools Redmine and Jira, to automate the complete workflow of a user story. This automation include:<br/>
 
 1. Automated status change of the story from one state to another based on the events.<br/>
 2. Acceptance Test Automation with story status update as part of the CI pipeline.<br/>
