@@ -15,9 +15,10 @@ User stories are the basic building block in Agile approach for software develop
 <br/>--Mike Cohen <a href='https://www.mountaingoatsoftware.com/agile/user-stories'>User Stories</a>
 
 User stories serve several different purposes including:<br/>
+
 1. They are the basic constituent of Sprint planning. <br/>
 2. They also depict the velocity of the team if appropriately sized.<br/>
-3. Interdependencies in user stories help in resource scheduling<br/>
+3. Inter-dependencies in user stories help in resource scheduling<br/>
 4. **User stories are basis for the automation**, the whole automation revolves around the user story from inception to completion and then in production, a user story serves as the pivot for any good automation. <br/>
 5. And last but not the least user stories are the basis of completion of the project for client and developer alike.<br/>
 
@@ -25,6 +26,7 @@ User stories serve several different purposes including:<br/>
 The structure and content of the user story depends on several factors, in the past 5 years I have worked on 6 unique projects in three continents of the world with six different teams varying not only in size and skills but coming from different cultural backgrounds. In this journey, I have worked with teams in very large enterprises to start-up developing the next generation technologies.<br/>
 
 In this experience only common part in the user stories I have come across is the start of the story with "As a ... ", I have seen user stories that consists of:<br/>
+
 * The algorithmic style if-then-else. <br/>
 * The user story that is concise enough to capture the functionality that is deliverable in a single day.<br/>
 * To the user story that is big enough to capture the whole functionality of the project.<br/>
@@ -34,6 +36,7 @@ In this experience only common part in the user stories I have come across is th
 ### Automation 
 A user story should act as a pivot for robust automation. From the inception of the user story as it gets added in the agile tool (like JIRA), to the production as it is delivered and deployed on different environments, the automation should revolve around the user story.
 The user story workflow would be our primary target for automation. I take two deifferent tools Redmine and Jira, to automate the complete workflow of a user story. This automation include:<br/>
+
 1. Automated status change of the story from one state to another based on the events.<br/>
 2. Acceptance Test Automation<br/>
 3. Automated notification related to one or group of user stories via ChatOps system. <br/>
