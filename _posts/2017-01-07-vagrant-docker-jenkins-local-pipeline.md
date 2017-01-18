@@ -33,3 +33,9 @@ What you get:
 
 2. All the necessary developer’s tools inside the docker container called dev-container, which could be managed by the team lead.
 
+3. Local Docker host and docker-compose running inside the VM, with the local docker registry connectivity to access the available docker images.
+
+The developer is up and running in just few minutes and even contributing to the code right away.
+
+
+
