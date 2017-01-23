@@ -15,9 +15,9 @@ One of the core value of DevOps is Culture, it ensures that the teams work toget
 
 A good ChatOps implementation depends on the Chat system/tool. Below are some of the key characteristics that one must keep in view when choosing a good Chat system/tool.
 
-1.	**Performance and Reliability**: One of the key requirement for a good Chat System is its performance and reliability. If you have happened to use the chat system in 90’s and first decade of 21st century you would still remember how painfully slow Skype/Sametime/Messenger could be. As the Chat System gets integrated with other tools and processes, it may have to process much more messages then a simple Chat application may have too. This becomes more important when you need to implement an on premise Chat System.
+1.	**Performance and Reliability**: One of the key requirement for a good Chat System is its performance and reliability. If you happened to use the chat system in 90’s and first decade of 21st century you would still remember how painfully slow Skype/Sametime/Messenger could be. As the Chat System gets integrated with other tools and processes, it may have to process many more messages then a simple group chat may have too. This becomes more important when you need to implement an on premise Chat System instead of a cloud hosted solution.
 
-2.	**API for Integration**: A non-integrated Chat System is worse than an email notification system. The modern Chat Systems support API for integration which can be used to integrate with other tools and processes.
+2.	**API for Integration**: A non-integrated Chat System is no better than an email notification system. The modern Chat Systems support API for integration which can be used to integrate with other tools and processes.
 
 3.	**Support for ChatBots**: ChatBots are essential tool for implementing a useful ChatOps system. You can implement various ChatBots for different needs. ChatBots are better replacement for Wiki pages and even documentation. Couple of ChatBots that we implement in this chapter:
 
