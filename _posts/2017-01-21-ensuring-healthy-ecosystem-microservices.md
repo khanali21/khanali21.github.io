@@ -22,5 +22,6 @@ In this chapter we discuss few of such tests.
 5. Service Health Endpoint validation
 6. Logging standard validation
 7. Fault tolerance validation (Hystrix if used)
+8. Validate versioning scheme for all the artefacts produced. 
 
 The above tests validation should be included as part of the CI, in order to ensure a fast feedback. 
