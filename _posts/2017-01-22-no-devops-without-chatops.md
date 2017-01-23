@@ -20,8 +20,8 @@ A good ChatOps implementation depends on the Chat system/tool. Below are some of
 2.	**API for Integration**: A non-integrated Chat System is no better than an email notification system. The modern Chat Systems support API for integration which can be used to integrate with other tools and processes.
 
 3.	**Support for ChatBots**: ChatBots are essential tool for implementing a useful ChatOps system. You can implement various ChatBots for different needs. ChatBots are better replacement for Wiki pages and even documentation. Couple of ChatBots that we implement in this chapter are: 
-    A ChatBot for on-boarding new developer, business analyst or any other member of the team,
-    A ChatBot for querying key information about any process or current status of environment, pipeline and even production systems.
+    * A ChatBot for on-boarding new developer, business analyst or any other member of the team,
+    * A ChatBot for querying key information about any process or current status of environment, pipeline and even production systems.
 
 4.	**Search**: A key feature for a good ChatOps system is ability to index, tag and search the messages in Channels/Conversations. A Search ChatBot may make it even easier to query the information based on different tags.
 
