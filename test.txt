@@ -1,26 +1,15 @@
-In the last few projects I have implemented a Development environment for the microservices and android application using the Vagrant with Docker.
+µServices thrive in a good ecosystem, building applications based on µService Architecture requires evolving an ecosystem in which every member not only perform optimally but evolve as part of that system. The complex dependency graph among mutually dependant µServices require each of the µService to follow certain quality acceptance criteria. This criteria not only applies to the communication between the µServices, but also to the other internal and external systems interacting with that µService.
+Take the example of Swagger endpoint exposed by the µService, your architecture may require the endpoint to be exposed and up during the test and pre-prod phases but disabled in production. Similarly in the example of logging and tracing, a good architect will enforce certain requirements for any µService to implement tracing to help debugging e.g. using Spring Sleuth for the tracing, logging pushed to Kafka topic etc. There could be numerous such other requirements besides the functionality, which a µService developer must implement when developing a new µService.
 
-In those good days when the software was to be released every year and the developers will stay in the company for decades, there used to be tens of wiki pages describing how to set up your local machine for developing the greatest app on the earth.
-There used to many more pages, describing how to push the changes to git/svn repo in order to make sure that the Continous Integration process does not fail overnight and your release manager does not yell at you.
-But the yelling will never stop and you will find the pissed of colleagues telling you how inept you are. And you would be furstratingly thinking that everything passed on my local machine, maven, gradle, unit tests and even e2e acceptance test were passing.
-Fast forward to 2010, with multiple git repos, separate projects for each microservice, 100's of CI pipeline (say one for each microservice), and the enthusiastic developers coding day and night pushing the changes to git repo triggering the CI and even CD process.
-And now even though your CI process runs takes only minutes to run for each service, but there are 100's of concurrently executing process. Last thing you need is the scenario where developer checks in the code that keeps on failing on the CI server while being successful on his/her local machine.
-Last but not the least, if the team consists of developers with local machines running windows, linux and the mac at the sametime, then you need to maintain the wiki pages for each environment set up and also deal with the situation where something is available on one platform and not on other.
+Enforcing a good quality gating for µService becomes a real challenge particularly when the development has been outsources to third parties. In this scenario, multiple teams with different background and skill level may write code of varying quality and also implement their own local standardization causing the ripples in ecosystem. A good CD pipeline need to ensure that the µService release acts as a responsible citizen in the complex ecosystem. This requires additional stage in the CD pipeline to test for the readiness of the µService to go in production. 
+In this chapter we discuss few of such tests.
 
-In this context the Vagrant+Docker setup for local environment using the local Jenkins CI pipeline takes care of all of the above concerns. Let us say you join an awsome software development company and they give you brand new laptop and ask you to just intall vagrant and your preferred IDE.
-Only thing you need to do is git checkout the code which contains there files apart from the code.
-a) Vagrantfile
-b) Dockerfile
-c) Jenkinsfile
+1. Distributed Tracing Validation (Polyglot µServices)
+2. Swagger Endpoints Validation 
+3. Chef cookbook (if used) Validation 
+4. Docker container (if used) validation
+5. Service Health Endpoint validation
+6.  Logging standard validation
+7. Fault tolerance validation (Hystrix if used)
 
-Only thing you need to do is "vagrant up" and here you go:
-What you get:
-1. A local instance of Jenkins which has exactly the same pipeline with relevant stages only.
-2. All the necessary dev tools inside the docker container called dev-container, which could be managed by the team lead.
-3. Local Docker host and docker-compose running inside the VM, with the local docker repo connectivity if needed.
-
-The developer is up and running in just few minutes and even contributing to the code right away.
-
-
-
-
+The above tests validation may also be included as part of the CI, in order to ensure a fast feedback. Usually the developers would implement this as part of the µServices framework, in case of polyglot µServices most of these may come out-of-the-box as part of the framework. However it is important to validate all of these tests as part of the CI/CD pipeline ensuring that any µService released does not end up as rogue member in the ecosystem.
