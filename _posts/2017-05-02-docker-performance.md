@@ -4,7 +4,7 @@ title: "Docker Performance Benchmark"
 excerpt: "Why docker makes so much sense.."
 tags: [docker, devops, initializr, automation-that-works]
 image:
-  feature: docker-perf-one-host2.png
+  feature: docker-perf-one-host-2.png
   credit: Alexey Ermakov
   creditlink: https://arxiv.org/pdf/1704.05592.pdf
 comments: true
