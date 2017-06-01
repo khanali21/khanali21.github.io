@@ -23,7 +23,7 @@ Similarly another key objective of the performance testing was to do a **simple 
 
 Despite all the complexity and effort involved in performing performance and reliability testing, these **objectives were clear and attainable**. The results were not only **quantifiable but also assertable** during the performance test execution.
 
-**µServices Performance Testing**
+**µServices**
 µServices Architecture however changed the whole performance testing approach. µService application has very small footprint in terms of memory by default, which makes it easier for the performance engineers to do memory consumption analysis. 
 By definition µServices are fine grained enough to use the system resources (cpu, disk and network) in a consistent manner. The resource utilisation analysis with the help of appropriate monitoring tools makes it possible to integrate the performance testing as part of **Continuous Integration pipeline** by **shifting** the performance testing as **left** as possible.
 As the bulk of functional logic moved towards the UI (browser), the JavaScript frameworks like AngularJS allowed the user to implement MVC on the client side, a new challenge emerged for the performance engineers. The **UI performance testing** e.g. rendering of the large list with infinite scrolling, number of concurrent ajax calls, page size etc. become important aspects of application performance.  
@@ -37,9 +37,18 @@ With Serverless/Function-as-a-Service (FaaS) becoming mainstream, performance te
 The objective of the performance testing, take a new perspective i.e. Optimization. There is however a delicate balancing required when optimizing the code to run as serverless, over-optimisation and premature optimisation is declared as root of all evils by DonaldKnuth.   
 When developing code that is designed to execute in a serverless environment, the optimization starts right from the developer's machine and/or local test environment running as docker container or VM. 
 
-Profiling becomes an important aspect of Quality Assurance Criteria as part of the CI pipeline. Developer may run the profiling tools as part of the local pipeline to identify the spikes and regression in the code performance covering CPU and Memory usage. For the critical functions you may want to look at the System Interrupt Calls, I/O calls.
-As part of the pipeline, the tools like AppDynamics, NewRelic etc. are also very useful to profile application under load and identify defects and/or bottlenecks. 
-Similarly your cloud provider may provide the profiling tools when the code is running on the cloud. AWS Lambda dashboard provides profiling single lambda function CPU performance & CloudWatch filter for monitoring memory consumption.
+**Profiling**
+Profiling becomes an important aspect of Quality Assurance Criteria as part of the **CI pipeline**. Developer may run the profiling tools as part of the l**ocal pipeline** to identify the spikes and regression in the code performance covering CPU and Memory usage. For the critical functions you may even want to look at the System Interrupt Calls, I/O calls.
+As part of the CI pipeline, the tools like AppDynamics, NewRelic etc. are also very useful to profile application under load and identify defects and/or bottlenecks. 
+Similarly your cloud provider may provide the profiling tools when the code is running on the cloud. **AWS Lambda dashboard** provides profiling single lambda function CPU performance & **CloudWatch filter** for monitoring memory consumption.
+
+_Performance (including Reliability) engineering is evolving as the application architecture is changing, in the coming years, new tools and approach will be needed for PRE (Performance & Reliability Engineering). I am keenly following the developments in this area. Get in touch if you share the interest._
+
+**References:**
+[Load Testing your API](https://www.3scale.net/2015/04/how-to-load-test-and-tune-performance-on-your-api-part-i/)
+[AWS Lambda Pricing] (https://aws.amazon.com/lambda/pricing/)
+[AWS Lambda Load Testing Harness] (https://aws.amazon.com/blogs/compute/serverless-testing-with-aws-lambda/)
+
  
  
   
