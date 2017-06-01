@@ -2,7 +2,7 @@
 layout: single
 title: "Code Performance and Resource Consumption Testing "
 excerpt: "With Serverless/Function as a Service (FaaS) becoming mainstream the Performance & Resource Consumption testing has become ever more important"
-tags: [docker, devops, initializr, automation-that-works]
+tags: [aws-lambda, devops, automation-that-works]
 image:
   feature: performance-chart.png
   credit: 
