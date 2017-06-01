@@ -16,5 +16,6 @@ Another of those key objective was to ensure that the memory usage by the applic
 Similarly another key objective of the performance testing was to do a simple benchmark in order to help devise capacity plan for the application.
 These objectives were clear and the results were not only quantifiable but also assertable during the performance test execution.
 
-µServices Architecture however changed the whole performance testing approach. µService application have very small footprint in terms of memory by default. And by definition they perform usually a fine grained single functionality.        
+µServices Architecture however changed the whole performance testing approach. µService application have very small footprint in terms of memory by default. And by definition they perform usually a fine grained single responsibility.
+        
   
