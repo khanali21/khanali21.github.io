@@ -9,19 +9,7 @@ image:
   creditlink: 
 comments: true
 ---
-* [Introduction](#introduction)
-* [Understanding AWS lambda cost](#understanding_lambda_cost)
-* [Performance Test Approaches](#testapproaches)
-* [Testing on AWS Lambda](#testingonaws)
-* [Testing Locally (Simulating AWS Lambda locally)](#testinglocally)
-* [Nodejs Sample Application to Test](#sampleapp)
-* [Writing Performance Benchmark Test](#performancetests)
-* [Executing Performance Benchmark](#executingbenchmark)
-* [Performance Test Results](#testresults)
-* [Estimating Costs ](#estimatingcosts)
-* [Performance Tuning](#performancetuning)
 
-<a name="introduction"></a>
 ## Introduction
 For the first time in software development performance penalty is directly associated with the actual dollars. Performance of the application is no more a "Non-Functional Requirement" which if not met will only result in some disgruntled customers complaining about slow response time.
 Unfortunately now a developer can not just recommend upgrading the server to compensate for a non performant piece of code. 
@@ -29,7 +17,6 @@ FaaS has brought us back to the days when you would optimize your code to run on
 Writing a non performance piece of code has a price, the difference could be paying $10 or $5000.
 To understand this let us understand as an example AWS Lambda pricing model.
 
-<a name="understanding_lambda_cost"></a>
 ## Understanding AWS lambda cost
 
 ### Factors impacting AWS Lambda Cost
@@ -67,8 +54,6 @@ GB-s = (Number of Execution * Memory allocated for the function)/1024
 Developing a cost prediction for application consisting of several serverless functions requires careful estimates based on proper benchmarking techniques. 
 I would discuss the basis for a such a cost prediction model in a separate paper. For the purpose of this document we use a very basic cost prediction model based on the data collected from the benchmark test against single REST endpoint of a sample nodejs lambda function.
 
-
-<a name="testapproaches"></a>
 ## Performance Test Approaches
 I will discuss here two approaches for AWS lambda testing. 
 
@@ -90,13 +75,11 @@ c. **Test Infrastructure:**  Running performance test against a real AWS Lambda 
 
 **_Note: In this article I discuss only benchmarking lambda functions._**
 
-<a name="testingonaws"></a>
 ## Testing on AWS Lambda
 AWS Lambda provide a very basic load test harness blueprint, which can be used to create a custom load test harness capable of running a load test which is essentially a unit test with number of iteration to be executed.
 Instead of using the AWS lambda test harness, you can also create a test harness consisting of your custom Jmeter tests and run them against real AWS lambda environment.
 Performance Testing against AWS lambda would however mean you pay for the test too. One of the desirable consequence of testing against real AWS Lambda environment is that it can be helpful in your cost estimation model for the application.
 
-<a name="testinglocally"></a>
 ## Testing Locally (Simulating AWS Lambda locally)
 Running benchmarks against a simulated AWS Lambda environment on a local infrastructure has several benefits. I will discuss here how to simulate AWS lambda environment using [serverless framework](https://serverless.com/) and [docker-lamda](https://github.com/lambci/docker-lambda).
 
@@ -122,28 +105,22 @@ The plugin also supports spinning up other Amazon Services like S3, DynmoDB etc.
 [ruby-jmeter](https://github.com/flood-io/ruby-jmeter) provides an very useful DSL for writing performance test cases which are then translated to Jmeter test plan before executing via Jmeter. 
 It is an essential tool for any developer to write simple but powerful Jmeter tests without being exposed to nitty-gritty of [JMeter](http://jmeter.apache.org/).
 
-<a name="sampleapp"></a>
 ## Nodejs Sample Application to Test
 For the purpose of this article I shall be using [an example](https://github.com/serverless/examples/tree/master/aws-node-rest-api-with-dynamodb-and-offline) from serverless framework. I have forked [here](https://github.com/ali-himindz/examples/tree/master/aws-node-rest-api-with-dynamodb-and-offline) and added the tests and updated the configuration to run simulated AWS lambda.
 In the subsequent article, I will be using a more concrete application consisting of several AWS lambda functions with a web UI based on a real life application.
 
-<a name="performancetests"></a>
 ## Writing Performance Tests
 stay tuned...
 
-<a name="executingbenchmark"></a>
 ## Executing Performance Benchmark 
 stay tuned...
 
-<a name="testresults"></a>
 ## Performance Test Results
 stay tuned...
 
-<a name="estimatingcosts"></a>
 ## Estimating Costs 
 stay tuned...
 
-<a name="performancetuning"></a>
 ## Performance Tuning
 stay tuned...
 
