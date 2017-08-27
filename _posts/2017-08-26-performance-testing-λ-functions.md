@@ -49,7 +49,7 @@ Third factor is the time it took for single execution of your function from the 
 ### AWS lambda cost components
 There are two components to the AWS lambda costs.
 
-1. **Invocations:**
+**1. Invocations:**
 Invoking your lambda functions has an associated cost. Currently the first one million requests per month are free. Thereafter you pay $0.20 per million request.
 This has direct impact on the architecture and size of your λ functions. You may either have multiple λ functions chained to execute a single request or a single large function serving all the requests.
 A fat (large) λ function is not necessarily wrong, the memory footprint of your λ function more often then not is dependent on the data loaded from external sources (e.g. DynmoDB table).
@@ -57,16 +57,15 @@ Having multiple chained functions requiring the same data can increase the cost 
 On the other hand, a fat λ function may be an anti-pattern for your application architecture. In case of a µServices based architecture, the granularity of the µServices in the system is one of the key architecture decision as this increases the complexity of your architecture.
 It is very tempting to create a one-to-one mapping between your µService and λ function. However this may not be the right design. I will discuss this in a separate paper. 
 
-2. **GB-Seconds:**
+**2. GB-Seconds:**
 The biggest component of the AWS lambda cost is GB-seconds. This is dependent on all three factors number of execution, memory allocation and CPU time. 
 Calculating GB-seconds with the number of invocations for your λ function is trivial in itself. The data reported by the AWS lambda monitoring tells you the number of millisecond each invocation of your lambda function took. 
 Formula for calculating the GB-Seconds is 
 GB-s = (Number of Execution * Memory allocated for the function)/1024
 
 ### Cost Prediction Model
-Developing a cost prediction for application consisting of several serverless functions requires careful estimates based on proper benchmarking techniques. 
+Developing a cost prediction model for application consisting of several serverless functions requires careful estimates based on proper benchmarking techniques. 
 I would discuss the basis for a such a cost prediction model in a separate paper. For the purpose of this document we use a very basic cost prediction model based on the data collected from the benchmark test against single REST endpoint of a sample nodejs λ function.
-
 
 <a name="testapproaches"></a>
 ## Performance Test Approaches
