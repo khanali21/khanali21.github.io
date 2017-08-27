@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Performance Testing AWS lambda functions "
-excerpt: "Performance Testing lambda functions is a significant challenge. Testing it locally is even bigger challenge. And interpreting the results from the tests that can be associated with the actual cost makes performance testing λ non-trivial. I discuss here how to overcome these challenges"
+excerpt: "Performance Testing lambda functions is a significant challenge. Testing it locally is even bigger challenge. And interpreting the results from the tests that can be associated with the actual cost makes performance testing lambda non-trivial. I discuss here how to overcome these challenges"
 tags: [aws-lambda, devops, faas, serverless, performance-testing, automation-that-works, ruby-jmeter, docker-lambda, serverless-plugin-simulate]
 image:
   feature: cloudwatch.png
@@ -36,11 +36,11 @@ To understand this let us understand as an example AWS Lambda pricing model.
 There three main factor impacting AWS Lambda cost.
 
 **a. Number of Executions:**
-Number of times your λ functions executed during a month. I will discuss further how the design of your serverless services impact the number of executions of λ function.   
+Number of times your lambda functions executed during a month. I will discuss further how the design of your serverless services impact the number of executions of lambda function.   
 
 **b. Memory Usage:**
-Memory required by your λ functions. It is important to note that AWS charges the memory in chunks of 128, 256, 512 upto 1536.
-This makes it very hard to optimize your λ function for memory utilization. I will discuss that in detail later in the article, to give you an early hint, consider a λ function that usually requires <100MB however every now and then (say one every 3 minutes (or one every 300 requests)) for a particular request the memory usage jumps to 1024MB due to certain data being processed by this particular request. Obviously you would need to allocate 1024MB memory to your Lambda function. 
+Memory required by your lambda functions. It is important to note that AWS charges the memory in chunks of 128, 256, 512 upto 1536.
+This makes it very hard to optimize your lambda function for memory utilization. I will discuss that in detail later in the article, to give you an early hint, consider a lambda function that usually requires <100MB however every now and then (say one every 3 minutes (or one every 300 requests)) for a particular request the memory usage jumps to 1024MB due to certain data being processed by this particular request. Obviously you would need to allocate 1024MB memory to your Lambda function. 
 However you can design two functions one needing <128M for every invocation and one needing ~1024M. You just doubled the number of executions required.
 
 **c. CPU time:**
@@ -51,21 +51,21 @@ There are two components to the AWS lambda costs.
 
 1. **Invocations:**
 Invoking your lambda functions has an associated cost. Currently the first one million requests per month are free. Thereafter you pay $0.20 per million request.
-This has direct impact on the architecture and size of your λ functions. You may either have multiple λ functions chained to execute a single request or a single large function serving all the requests.
-A fat (large) λ function is not necessarily wrong, the memory footprint of your λ function more often then not is dependent on the data loaded from external sources (e.g. DynmoDB table).
+This has direct impact on the architecture and size of your lambda functions. You may either have multiple lambda functions chained to execute a single request or a single large function serving all the requests.
+A fat (large) lambda function is not necessarily wrong, the memory footprint of your lambda function more often then not is dependent on the data loaded from external sources (e.g. DynmoDB table).
 Having multiple chained functions requiring the same data can increase the cost dramatically.
-On the other hand, a fat λ function may be an anti-pattern for your application architecture. In case of a µServices based architecture, the granularity of the µServices in the system is one of the key architecture decision as this increases the complexity of your architecture.
-It is very tempting to create a one-to-one mapping between your µService and λ function. However this may not be the right design. I will discuss this in a separate paper. 
+On the other hand, a fat lambda function may be an anti-pattern for your application architecture. In case of a µServices based architecture, the granularity of the µServices in the system is one of the key architecture decision as this increases the complexity of your architecture.
+It is very tempting to create a one-to-one mapping between your µService and lambda function. However this may not be the right design. I will discuss this in a separate paper. 
 
 2. **GB-Seconds:**
 The biggest component of the AWS lambda cost is GB-seconds. This is dependent on all three factors number of execution, memory allocation and CPU time. 
-Calculating GB-seconds with the number of invocations for your λ function is trivial in itself. The data reported by the AWS lambda monitoring tells you the number of millisecond each invocation of your lambda function took. 
+Calculating GB-seconds with the number of invocations for your lambda function is trivial in itself. The data reported by the AWS lambda monitoring tells you the number of millisecond each invocation of your lambda function took. 
 Formula for calculating the GB-Seconds is 
 GB-s = (Number of Execution * Memory allocated for the function)/1024
 
 ### Cost Prediction Model
 Developing a cost prediction for application consisting of several serverless functions requires careful estimates based on proper benchmarking techniques. 
-I would discuss the basis for a such a cost prediction model in a separate paper. For the purpose of this document we use a very basic cost prediction model based on the data collected from the benchmark test against single REST endpoint of a sample nodejs λ function.
+I would discuss the basis for a such a cost prediction model in a separate paper. For the purpose of this document we use a very basic cost prediction model based on the data collected from the benchmark test against single REST endpoint of a sample nodejs lambda function.
 
 
 <a name="testapproaches"></a>
@@ -74,7 +74,7 @@ I will discuss here two approaches for AWS lambda testing.
 
 * **Benchmarking with Profiling**
 
-Performance Benchmarking with profiling is the approach to test your λ functions with a reasonable (non-enterprise) dataset locally. 
+Performance Benchmarking with profiling is the approach to test your lambda functions with a reasonable (non-enterprise) dataset locally. 
 In the context of RESTapi endpoint benchmarking such test can be written in JMeter. I discuss in detail below the approach write RESTapi benchmark tests using ruby-jmeter and integrating these tests as part of Continuous integration.
 Later on based on the benchmark results we do the CPU and memory profiling using standard nodejs profiling techniques and tune the code for optimal performance. And run the benchmark tests again to see the impact on AWS lambda costs.
 
@@ -88,7 +88,7 @@ b. **Test Scenario:** Carefully selected test scenario representing the real lif
 
 c. **Test Infrastructure:**  Running performance test against a real AWS Lambda test environment can be very very expensive, therefore it is imperative to run such test against a properly simulated environment. Which may require local infrastructure set up.   
 
-**_Note: In this article I discuss only benchmarking λ functions._**
+**_Note: In this article I discuss only benchmarking lambda functions._**
 
 <a name="testingonaws"></a>
 ## Testing on AWS Lambda
