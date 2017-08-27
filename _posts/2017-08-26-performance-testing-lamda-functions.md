@@ -148,9 +148,6 @@ stay tuned...
 stay tuned...
 
 
-
-
-
 ## References:
 
 [Load Testing your API](https://www.3scale.net/2015/04/how-to-load-test-and-tune-performance-on-your-api-part-i/)
