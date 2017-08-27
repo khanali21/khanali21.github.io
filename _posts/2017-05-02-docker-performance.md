@@ -6,7 +6,7 @@ tags: [docker, devops, initializr, automation-that-works]
 image:
   feature: docker-perf-one-host-2.png
   credit: Alexey Ermakov
-  creditlink: https://arxiv.org/pdf/1704.05592.pdf
+  creditlink: 
 comments: true
 ---
 

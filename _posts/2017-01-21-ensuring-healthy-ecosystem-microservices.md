@@ -6,7 +6,7 @@ tags: [microservice-testing, distribute-tracing, hystrix, polyglot-microservices
 image:
   feature: ecosystem-health.png
   credit:
-  creditlink: http://www.wikihow.com/Tell-if-Your-Fish-Is-Dead
+  creditlink: 
 comments: true
 ---
 µServices thrive in a good ecosystem, building applications based on µService Architecture requires evolving an ecosystem in which every member not only perform optimally but evolve as part of that system. The complex dependency graph among mutually dependant µServices require each of the µService to follow certain quality acceptance criteria. This criteria not only applies to the communication between the µServices, but also to the other internal and external systems interacting with that µService.

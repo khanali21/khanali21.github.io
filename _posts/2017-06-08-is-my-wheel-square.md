@@ -6,7 +6,7 @@ tags: [devops, automation, ci-cd, automaton, automation-that-works]
 image:
   feature: do-not-reinvent-the-wheel.png
   credit: 
-  creditlink: https://blog.codinghorror.com/dont-reinvent-the-wheel-unless-you-plan-on-learning-more-about-wheels/
+  creditlink: 
 comments: true
 ---
 
