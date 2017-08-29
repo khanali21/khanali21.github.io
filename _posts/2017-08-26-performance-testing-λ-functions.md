@@ -136,9 +136,10 @@ The setup includes:
 ```yaml
 plugins:
   - serverless-plugin-simulate
-
 ```
+
 2. Edit serverelss.yml and add services section under custom->simulate
+
 ```yaml
 custom:
   simulate:
