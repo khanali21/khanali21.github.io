@@ -15,6 +15,7 @@ comments: true
 * [Testing on AWS Lambda](#testingonaws)
 * [Testing Locally (Simulating AWS Lambda locally)](#testinglocally)
 * [Nodejs Sample Application to Test](#sampleapp)
+* [Setup for AWS Lambda Simulation]($setup)
 * [Writing Performance Benchmark Test](#performancetests)
 * [Executing Performance Benchmark](#executingbenchmark)
 * [Performance Test Results](#testresults)
