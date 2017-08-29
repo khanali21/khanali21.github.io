@@ -126,6 +126,58 @@ It is an essential tool for any developer to write simple but powerful Jmeter te
 For the purpose of this article I shall be using [an example](https://github.com/serverless/examples/tree/master/aws-node-rest-api-with-dynamodb-and-offline) from serverless framework. I have forked [here](https://github.com/ali-himindz/examples/tree/master/aws-node-rest-api-with-dynamodb-and-offline) and added the tests and updated the configuration to run simulated AWS lambda.
 In the subsequent article, I will be using a more concrete application consisting of several AWS lambda functions with a web UI based on a real life application.
 
+<a name="setup"></a>
+## Setup for AWS Lambda Simulation
+**How it works:** 
+[serverless-plugin-simulate](https://github.com/serverless-community-labs/serverless-plugin-simulate) uses [docker-lambda](https://github.com/lambci/docker-lambda) to run the AWS Lambda function via the apigateway.
+The setup includes:
+1. Edit serverless.yml and add serverless-plugin-simulate in the plugins section.
+```yaml
+plugins:
+  - serverless-plugin-simulate
+
+```
+2. Edit serverelss.yml and add services section under custom->simulate
+```yaml
+custom:
+  simulate:
+    services: docker-compose.yml
+```
+This docker-compose definition is used to bring up the other required services including e.g. S3, Dynamodb and other functions that you may want to change.
+
+3. For this example we use the following docker-compose.yml to bring up a local S3 and DynamoDB instance.
+
+```yaml
+version: '2'
+
+services:
+  dynamodb:
+    image: deangiberson/aws-dynamodb-local
+    ports:
+      - "8000:8000"
+  s3:
+    image: strobo/moto
+    command: [s3, "-H", "0.0.0.0"]
+    ports:
+      - "6000:5000"
+```
+
+4. We add the dependencies in package.json
+```json
+
+    "serverless": "^1.20.2",
+    "serverless-plugin-simulate": "0.0.17"
+```
+5. Add the scripts to run the simulation via npm
+
+```json
+"scripts": {
+    "sls:lambda": "sls simulate lambda -p 4000",
+    "sls:simulate": "sls simulate apigateway -p 5000 --lambda-port 4000"
+  }
+```
+
+
 <a name="performancetests"></a>
 ## Writing Performance Tests
 stay tuned...
