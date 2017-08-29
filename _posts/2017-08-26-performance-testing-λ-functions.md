@@ -111,8 +111,8 @@ I will be using nodejs image of docker-lambda to simulate AWS lambda environment
 [serverless-plugin-simulate](https://github.com/serverless-community-labs/serverless-plugin-simulate) is serverless plugin to replicate Amazon api-gateway to invoke docker-lambda runtime.
 The plugin also supports spinning up other Amazon Services like S3, DynmoDB etc. running inside docker container.
 
-### serverless-s3-local
-[serverless-s3-local](https://www.npmjs.com/package/serverless-s3-local) is the serverless framework plugin to simuate S3 locally. 
+### Local S3 docker Container (docker-moto)
+[docker-moto](https://github.com/strobo-inc/docker-moto) is docker images containing python moto library for running mock AWS services.
 
 ### Local DynmoDB Docker Container
 [docker_aws_dynamodb_local](https://github.com/deangiberson/docker_aws_dynamodb_local) is a docker image for running the [DynamoDBLocal.jar](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.DynamoDBLocal.html) inside docker container.
