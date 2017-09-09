@@ -181,8 +181,20 @@ services:
 
 
 <a name="performancetests"></a>
-## Writing Performance Tests
-stay tuned...
+## Performance Testing
+In 2003, I was involved in troubleshooting a major performance issue of enterprise application running on IBM WebSphere Application Server. After struggling for many weeks when the issue was finally resolved, the team realised that number one the performance testing of application was not adequate enough and number two the approach to performance testing was not valid. 
+Mercury Interactive's LoadRunner was the most popular and expensive tool for performance testing and since the test were written in C language, it was considered most difficult tool to grasp. For the next 5 years, I embarked on learning performance testing. Performance testing was (and perhaps still is) considered a black art. From Concurrent users to data pooling, seed data to transaction response time and MTBF (Mean time between to failure) to MTTF (Mean Time to Failure) everything is up for discussion.
+Despite all the challenges, Performance Testing monolith applications over the years has become relatively straight forward and standard.
+However the traditional performance testing strategy does not work well with modern application architecture (aka microservices/serverless architecture), it also does not fit weill with modern application development life cycle. In Agile development methodology, practices like shift left testing require more aggressive, fast and simple approach for performance testing. Writing expensive (both in time and resources) performance tests is no more feasible. 
+I discuss here the simple benchmarking of AWS Lambda functions (invoked via REST endpoints using API Gateway) as part of the Continous Integration (CI) process. 
+
+### Ruby-JMeter
+
+
+
+
+
+
 
 <a name="executingbenchmark"></a>
 ## Executing Performance Benchmark 
