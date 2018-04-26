@@ -4,7 +4,7 @@ title: "Performance Testing AWS lambda (λ) functions - (Continued.) "
 excerpt: "Performance Testing λ functions is a significant challenge. Testing it locally is even bigger challenge. And interpreting the results from the tests that can be associated with the actual cost makes performance testing λ non-trivial. I discuss here how to overcome these challenges"
 tags: [aws-lambda, devops, faas, serverless, performance-testing, automation-that-works, ruby-jmeter, docker-lambda, serverless-plugin-simulate]
 image:
-  feature: cloudwatch.png
+  feature: lambda-benchmark.png
   credit: 
   creditlink: 
 comments: true
@@ -12,10 +12,9 @@ comments: true
 * [Executing Performance Benchmark](#executingbenchmark)
 * [Performance Test Results](#testresults)
 * [Estimating Costs ](#estimatingcosts)
-* [Performance Tuning](#performancetuning)
 * [Some Questions](#questions)
 
-[Part 1](https://ali-himindz.github.io/performance-testing-%CE%BB-functions/)
+Read the [Part 1](https://ali-himindz.github.io/performance-testing-%CE%BB-functions/) of this article.
 
 <a name="executingbenchmark"></a>
 ## Executing Performance Benchmark 
@@ -178,15 +177,6 @@ The two key calculations are
 This is the multiplier of 100ms interval based on 30 millions requests per month.
 - compute_charges
 This is the total expected charges based on the average execution time.
-
-
-
-
-<a name="performancetuning"></a>
-## Performance Tuning
-stay tuned...
-
-
 
 
 <a name="questions"></a>

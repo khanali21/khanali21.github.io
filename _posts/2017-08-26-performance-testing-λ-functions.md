@@ -188,31 +188,18 @@ Despite all the challenges, Performance Testing monolith applications over the y
 However the traditional performance testing strategy does not work well with modern application architecture (aka microservices/serverless architecture), it also does not fit weill with modern application development life cycle. In Agile development methodology, practices like shift left testing require more aggressive, fast and simple approach for performance testing. Writing expensive (both in time and resources) performance tests is no more feasible. 
 I discuss here the simple benchmarking of AWS Lambda functions (invoked via REST endpoints using API Gateway) as part of the Continous Integration (CI) process. 
 
-### Ruby-JMeter
-
-
-
-
-
-
 
 <a name="executingbenchmark"></a>
 ## Executing Performance Benchmark 
-stay tuned...
+[Part II](https://ali-himindz.github.io/performance-testing-%CE%BB-functions-2/)
 
 <a name="testresults"></a>
 ## Performance Test Results
-stay tuned...
+[Part II](https://ali-himindz.github.io/performance-testing-%CE%BB-functions-2/)
 
 <a name="estimatingcosts"></a>
 ## Estimating Costs 
-stay tuned...
-
-<a name="performancetuning"></a>
-## Performance Tuning
-stay tuned...
-
-
+[Part II](https://ali-himindz.github.io/performance-testing-%CE%BB-functions-2/)
 
 
 
