@@ -113,6 +113,6 @@ Let's look at the hot key problem little more, we said that if we use the compan
 
 <a name="eureka"></a>
 ## Eureka!!!
-So what we do? It is easy we just need to find some magic suffix that can group all those items in a group of 3000 each. This could be some other property of the data, e.g. year, or a random number generated via modulo arithmetic to result in numbers from 1-17. And our partition key could be <Company Name>-<Magic Suffix>.
+So what we do? It is easy we just need to find some magic suffix that can group all those items in a group of 3000 each. This could be some other property of the data, e.g. year, or a random number generated via modulo arithmetic to result in numbers from 1-17. And our partition key could be \<Company Name\>-\<Magic Suffix\>.
 
    
