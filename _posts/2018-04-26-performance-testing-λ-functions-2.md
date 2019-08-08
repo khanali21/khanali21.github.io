@@ -14,7 +14,7 @@ comments: true
 * [Estimating Costs ](#estimatingcosts)
 * [Some Questions](#questions)
 
-Read the [Part 1](https://ali-himindz.github.io/performance-testing-%CE%BB-functions/) of this article.
+Read the [Part 1](https://khanali21.github.io/performance-testing-%CE%BB-functions/) of this article.
 
 <a name="executingbenchmark"></a>
 ## Executing Performance Benchmark 

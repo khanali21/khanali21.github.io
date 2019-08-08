@@ -124,7 +124,7 @@ It is an essential tool for any developer to write simple but powerful Jmeter te
 
 <a name="sampleapp"></a>
 ## Nodejs Sample Application to Test
-For the purpose of this article I shall be using [an example](https://github.com/serverless/examples/tree/master/aws-node-rest-api-with-dynamodb-and-offline) from serverless framework. I have forked [here](https://github.com/ali-himindz/examples/tree/master/aws-node-rest-api-with-dynamodb-and-offline) and added the tests and updated the configuration to run simulated AWS lambda.
+For the purpose of this article I shall be using [an example](https://github.com/serverless/examples/tree/master/aws-node-rest-api-with-dynamodb-and-offline) from serverless framework. I have forked [here](https://github.com/khanali21/examples/tree/master/aws-node-rest-api-with-dynamodb-and-offline) and added the tests and updated the configuration to run simulated AWS lambda.
 In the subsequent article, I will be using a more concrete application consisting of several AWS lambda functions with a web UI based on a real life application.
 
 <a name="setup"></a>
@@ -191,15 +191,15 @@ I discuss here the simple benchmarking of AWS Lambda functions (invoked via REST
 
 <a name="executingbenchmark"></a>
 ## Executing Performance Benchmark 
-[Part II](https://ali-himindz.github.io/performance-testing-%CE%BB-functions-2/)
+[Part II](https://khanali21.github.io/performance-testing-%CE%BB-functions-2/)
 
 <a name="testresults"></a>
 ## Performance Test Results
-[Part II](https://ali-himindz.github.io/performance-testing-%CE%BB-functions-2/)
+[Part II](https://khanali21.github.io/performance-testing-%CE%BB-functions-2/)
 
 <a name="estimatingcosts"></a>
 ## Estimating Costs 
-[Part II](https://ali-himindz.github.io/performance-testing-%CE%BB-functions-2/)
+[Part II](https://khanali21.github.io/performance-testing-%CE%BB-functions-2/)
 
 
 

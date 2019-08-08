@@ -9,4 +9,4 @@ image:
   creditlink: 
 comments: true
 ---
-![DevOps Tools Dependency Graph](https://ali-himindz.github.io/assets/images/devops-tools-dependency.png)
+![DevOps Tools Dependency Graph](https://khanali21.github.io/assets/images/devops-tools-dependency.png)
